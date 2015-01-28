@@ -1,11 +1,7 @@
-body {
-    background: #222;
-    font: 10px sans-serif;
-    margin: auto;
-    position: relative;
-    width: 960px;
+* {
+    border-radius: 0px !important;
 }
 
-text {
-    text-anchor: middle;
+.input-group {
+    padding-bottom: 30px;
 }

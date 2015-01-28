@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< Updated upstream
   <component name="IdProvider" IDEtalkID="BE1FD01AC991DFAE06D5B1BBA1186EE0" />
+=======
+  <component name="IdProvider" IDEtalkID="18C243754B1FFEDECB90B79963B6679D" />
+>>>>>>> Stashed changes
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
@@ -8,7 +12,10 @@
     <states>
       <state key="ProjectJDKs.UI">
         <settings>
+<<<<<<< Updated upstream
           <last-edited>Python 2.7.5 (/usr/bin/python)</last-edited>
+=======
+>>>>>>> Stashed changes
           <splitter-proportions>
             <option name="proportions">
               <list>
