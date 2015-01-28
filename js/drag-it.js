@@ -16,10 +16,21 @@ $(function() {
         icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
     });
 
-    var countingfirstcolumn = $(".notstarted .panel-body").length;
-    $( ".panel-title" ).text( countingfirstcolumn + " Files" );
-    var countingfirstcolumn = $(".started .panel-body").length;
-    $( ".panel-title" ).text( countingfirstcolumn + " Files" );
+
+    var countingfirstcolumn = $(".userid_jean_simard .notstarted .panel-body .drakard").length;
+    $( ".userid_jean_simard .notstarted .panel-title" ).text( countingfirstcolumn + " Files" );
+
+    var countingscdcolumn = $(".userid_jean_simard .started .panel-body .drakard").length;
+    $( ".userid_jean_simard .started .panel-title" ).text( countingscdcolumn + " Files" );
+
+    var countingthrdcolumn = $(".userid_jean_simard .review .panel-body .drakard").length;
+    $( ".userid_jean_simard .review .panel-title" ).text( countingthrdcolumn + " Files" );
+
+    var countingfrthcolumn = $(".userid_jean_simard .reviewpartner .panel-body .drakard").length;
+    $( ".userid_jean_simard .reviewpartner .panel-title" ).text( countingfrthcolumn + " Files" );
+
+    var countingffthcolumn = $(".userid_jean_simard .completed .panel-body .drakard").length;
+    $( ".userid_jean_simard .completed .panel-title" ).text( countingffthcolumn + " Files" );
 });
 
 
