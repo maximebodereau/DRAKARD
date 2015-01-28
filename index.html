@@ -1,34 +1,8 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<style>
 
-    body {
-        background: #222;
-        font: 10px sans-serif;
-        margin: auto;
-        position: relative;
-        width: 960px;
-    }
-
-    text {
-        text-anchor: middle;
-    }
-
-    #credit {
-        position: absolute;
-        right: 4px;
-        bottom: 4px;
-        color: #ddd;
-    }
-
-    #credit a {
-        color: #fff;
-        font-weight: bold;
-    }
-
-</style>
-<div id="credit">Inspired by <a href="http://blog.pixelbreaker.com/polarclock/">pixelbreaker</a>.</div>
-<script src="http://d3js.org/d3.v3.js"></script>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/d3.v3.js"></script>
 <script>
 
     var width = 960,
@@ -105,7 +79,7 @@
     function fields() {
         var now = new Date;
         return [
-            {index: .7, text: formatSecond(now), value: now.getSeconds() / 60},
+            {index: .7, text: formatSecond(now), value: ''},
             {index: .6, text: formatMinute(now), value: now.getMinutes() / 60},
             {index: .5, text: formatHour(now),   value: now.getHours() / 24},
             {index: .3, text: formatDay(now),    value: now.getDay() / 7},
