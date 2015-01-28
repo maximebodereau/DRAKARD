@@ -15,4 +15,9 @@ $(function() {
         var icon = $( this );
         icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
     });
+
+    var countingfirstcolumn = $(".firstcolumn .panel-body").length;
+    $( ".panel-title" ).text( countingfirstcolumn + " Files" );
 });
+
+
