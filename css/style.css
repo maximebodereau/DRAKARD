@@ -18,6 +18,11 @@
     margin-bottom: 0px;
 }
 
+.panel .drakard {
+    padding: 5px;
+}
+
+
 .jumbotron {
     background-color: #000;
 }
