@@ -9,3 +9,11 @@
 .panel-group {
     display: inline-block;
 }
+
+.panel-body {
+    padding: 3px;
+}
+
+.panel .panel {
+    margin-bottom: 0px;
+}
