@@ -42,9 +42,9 @@
                 <li>
                     <a href="webapp.html"><span class="glyphicon glyphicon-tasks"></span> Status</a>
                 </li>
-                <!--li>
+                <li>
                     <a href="webapp.html"><span class="glyphicon glyphicon-dashboard"></span> Report</a>
-                </li-->
+                </li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
@@ -105,7 +105,11 @@
                                             <div class="panel panel-default">
                                                 <div class="drakard">
                                                     <label class="label label-default"><%-cell.id %></label>
-                                                    <div class="Name"><span class="glyphicon glyphicon-briefcase"></span><%- cell.name %></div>
+                                                    <span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
+                                                    <% if (cell.lastChanged) { %>
+                                                        <div class="pull-right"><small><span class="glyphicon glyphicon-calendar"></span><%- cell.lastChanged %></small></div>
+                                                    <% } %>
+                                                    <div class="Name"><%- cell.name %></div>
                                                     <% _.each(cell.statuses, function(status) { %>
                                                     <label class="label label-<%- status.labelType %>"><%- status.name %></label>
                                                     <% }) %>
@@ -131,6 +135,7 @@
 <script type="text/javascript" src="js/scripts.js"></script>
 <script type="text/javascript" src="js/drag-it.js"></script>
 <script type="text/javascript" src="js/underscore-min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
 <script type="text/javascript" src="sequences2/js/sequences.js"></script>
 </body>
 </html>

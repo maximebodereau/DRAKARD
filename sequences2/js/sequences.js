@@ -54,6 +54,7 @@ var model = {
 
 var usernames = _.uniq(_.pluck(serverJson, 'UserName'));
 var columnTypes = _.keys(statusGrouping);
+var now = moment();
 
 _.each(usernames, function(username){
     var row = {
@@ -102,6 +103,7 @@ _.each(usernames, function(username){
 
         _.each(userColumnEvents, function(userColumnEvent){
             var labelType = "default";
+            var lastChanged = moment.duration(now.diff(moment(userColumnEvent.DateTime))).humanize();
 
             _.find(statusTypes, function(list, type){
                 if (_.contains(list, userColumnEvent.Status)){
@@ -110,10 +112,10 @@ _.each(usernames, function(username){
                 }
             });
 
-
             column.cells.push({
                 id: _.uniqueId('#DOC'),
                 name: userColumnEvent.TaxpayerName,
+                lastChanged : lastChanged,
                 statuses: [
                     {
                         labelType: labelType,
