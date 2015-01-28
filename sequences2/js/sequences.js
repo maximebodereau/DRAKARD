@@ -138,4 +138,15 @@ var template = _.template(templateString, {
 
 $('.table > tbody').append(template(model));
 
+// Stars
+$('.difficulty').children('span').on('click', function(){
+    var $el = $(this);
+    $el.removeClass('glyphicon-star-empty');
+    $el.addClass('glyphicon-star');
+    $el.nextAll().removeClass('glyphicon-star');
+    $el.nextAll().addClass('glyphicon-star-empty');
+    $el.prevAll().removeClass('glyphicon-star-empty');
+    $el.prevAll().addClass('glyphicon-star');
+});
+
 
