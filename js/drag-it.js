@@ -1,3 +1,7 @@
+$( document ).ready(function() {
+    $(".navbar-filters").pin();
+});
+
 $(function() {
     $( ".column" ).sortable({
         connectWith: ".column",
@@ -49,6 +53,13 @@ $(function() {
     $( ".userid_jean_simard .reviewpartner .panel-title" ).text( countingfrthcolumn + " Files" );
     var countingffthcolumn = $(".userid_jean_simard .completed .panel-body .drakard").length;
     $( ".userid_jean_simard .completed .panel-title" ).text( countingffthcolumn + " Files" );
+
+    $(".glyphicon.glyphicon-star-empty").click(
+        function () {
+            $(this).removeClass("glyphicon-star-empty");
+            $(this).addClass("glyphicon-star");
+        }
+    );
 
 });
 

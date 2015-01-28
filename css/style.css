@@ -22,6 +22,15 @@
     padding: 5px;
 }
 
+.navbar-static-top {
+    margin-bottom: 0px;
+}
+
+.navbar-filters {
+    z-index: 1000;
+    background: #e6e6e6;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.32);
+}
 
 .jumbotron {
     background-color: #323335;
