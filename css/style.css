@@ -22,10 +22,14 @@
     background-color: #000;
 }
 
-body {
+body.landing {
     background-color: #000;
 }
 
 .jumbotron h1 {
+    color: #A8ADB2;
+}
+
+.jumbotron p {
     color: #A8ADB2;
 }
