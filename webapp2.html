@@ -42,9 +42,9 @@
                 <li>
                     <a href="webapp.html"><span class="glyphicon glyphicon-tasks"></span> Status</a>
                 </li>
-                <li>
+                <!--li>
                     <a href="webapp.html"><span class="glyphicon glyphicon-dashboard"></span> Report</a>
-                </li>
+                </li-->
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
@@ -104,8 +104,8 @@
                                         <div class="panel-body">
                                             <div class="panel panel-default">
                                                 <div class="drakard">
-                                                    <label class="label label-default">cell.id</label>
-                                                    <div class="Name"><span class="glyphicon glyphicon-briefcase"></span>cell.name</div>
+                                                    <label class="label label-default"><%-cell.id %></label>
+                                                    <div class="Name"><span class="glyphicon glyphicon-briefcase"></span><%- cell.name %></div>
                                                     <% _.each(cell.statuses, function(status) { %>
                                                     <label class="label label-<%- status.labelType %>"><%- status.name %></label>
                                                     <% }) %>

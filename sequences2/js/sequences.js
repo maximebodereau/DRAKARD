@@ -20,7 +20,7 @@ var serverJson = [
         "StatusName": "ReturnStatus",
         "Status": 4,
         "DateTime": "2015-01-28T10:52:37.2128099-05:00",
-        "TaxpayerName": "Joe Bin"
+        "TaxpayerName": "Bjorn Olafson"
     },
     {
         "FileName": "c:\\test.114",
@@ -28,7 +28,23 @@ var serverJson = [
         "StatusName": "ReturnStatus",
         "Status": 4,
         "DateTime": "2015-01-28T11:07:03.9833863-05:00",
+        "TaxpayerName": "Linda Roy"
+    },
+    {
+        "FileName": "c:\\test.114",
+        "UserName": "wkloaner",
+        "StatusName": "ReturnStatus",
+        "Status": 17,
+        "DateTime": "2015-01-28T11:07:03.9833863-05:00",
         "TaxpayerName": "Joe Bin"
+    },
+    {
+        "FileName": "c:\\test.114",
+        "UserName": "olaf",
+        "StatusName": "ReturnStatus",
+        "Status": 6,
+        "DateTime": "2015-01-28T11:07:03.9833863-05:00",
+        "TaxpayerName": "James Bin"
     }
 ];
 
@@ -54,7 +70,7 @@ _.each(usernames, function(username){
             return _.contains(statusGrouping[columnType], userEvent.Status);
         });
         var userColumnEventsSize = _.size(userColumnEvents);
-        var panelTypeOverride = (columnType === 'completed') ? "success" : null;
+        var panelTypeOverride = (columnType === 'completed') ? "default" : null;
 
         switch(true){
             case (userColumnEventsSize === 0):
