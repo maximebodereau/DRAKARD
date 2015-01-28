@@ -16,7 +16,9 @@ $(function() {
         icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
     });
 
-    var countingfirstcolumn = $(".firstcolumn .panel-body").length;
+    var countingfirstcolumn = $(".notstarted .panel-body").length;
+    $( ".panel-title" ).text( countingfirstcolumn + " Files" );
+    var countingfirstcolumn = $(".started .panel-body").length;
     $( ".panel-title" ).text( countingfirstcolumn + " Files" );
 });
 
