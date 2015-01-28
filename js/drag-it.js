@@ -4,6 +4,7 @@ $( document ).ready(function() {
 
 $(function() {
     $( ".column" ).sortable({
+        revert: true,
         connectWith: ".column",
         handle: ".drakard",
         cancel: ".portlet-toggle",
