@@ -1,5 +1,15 @@
 $( document ).ready(function() {
     $(".navbar-filters").pin();
+    $('input[name="daterange"]').daterangepicker(
+        {
+            format: 'YYYY-MM-DD',
+            startDate: '2013-01-01',
+            endDate: '2013-12-31'
+        },
+        function(start, end, label) {
+            alert('A date range was chosen: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+        }
+    );
 });
 
 $(function() {

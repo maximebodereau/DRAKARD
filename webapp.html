@@ -13,7 +13,8 @@
 	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
 	
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
+    <link href="css/daterangepicker-bs3.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
@@ -33,6 +34,8 @@
 	<script type="text/javascript" src="js/scripts.js"></script>
     <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
     <script type="text/javascript" src="js/jquery.pin.js"></script>
+    <script type="text/javascript" src="js/moment.js"></script>
+    <script type="text/javascript" src="js/daterangepicker.js"></script>
     <script type="text/javascript" src="js/drag-it.js"></script>
 
 </head>
@@ -119,6 +122,17 @@
                                 <li><a href="#"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span> </a></li>
                             </ul>
                         </li>
+                        <li>
+                            <div class="form-group rangedate">
+                                <input type="text" id="reservationtime" class="form-control" placeholder="Range Time">
+                            </div>
+
+                            <script type="text/javascript">
+                                $(document).ready(function() {
+                                    $('#reservationtime').daterangepicker({ timePicker: false, timePickerIncrement: 30, format: 'MM/DD/YYYY' });
+                                });
+                            </script>
+                        </li>
                     </ul>
                 <form class="navbar-form navbar-right" role="search">
                     <div class="form-group">
@@ -177,7 +191,7 @@
                                     <div class="drakard">
                                         <label class="label label-default">#3621</label>
 <span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
-<div class="pull-right"><small><span class="glyphicon glyphicon-calendar"></span> 10d</small></div>                                        <div class="Name"> Paisley Pelletier</div>
+<div class="pull-right"><small><span class="glyphicon glyphicon-calendar"></span> 7d</small></div>                                        <div class="Name"> Paisley Pelletier</div>
                                         <label class="label label-default">Not Prepared</label>
                                     </div>
                                 </div>
@@ -187,7 +201,7 @@
                                     <div class="drakard">
                                         <label class="label label-default">#2534</label>
 <span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
-<div class="pull-right"><small><span class="glyphicon glyphicon-calendar"></span> 10d</small></div>                                        <div class="Name"> Casey Brown</div>
+<div class="pull-right"><small><span class="glyphicon glyphicon-calendar"></span> 5d</small></div>                                        <div class="Name"> Casey Brown</div>
                                         <label class="label label-default">Document Received</label>
                                     </div>
                                 </div>
@@ -203,8 +217,8 @@
                                 <div class="panel panel-default">
                                     <div class="drakard">
                                         <label class="label label-default">#5321</label>
-<span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
-                                        <div class="Name"> Haley Tremblay</div>
+                                        <span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
+                                        <div class="pull-right text-danger"><small><span class="glyphicon glyphicon-calendar"></span> 10h</small></div>                                          <div class="Name"> Haley Tremblay</div>
                                         <label class="label label-success">Scanned</label>
                                         <label class="label label-success">in Progress</label>
                                     </div>

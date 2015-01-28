@@ -58,6 +58,10 @@
     border: 1px solid rgba(255, 255, 255, 0.43);
 }
 
+.rangedate {
+    margin-top: 7px;
+}
+
 .jumbotron {
     background-color: #323335;
     text-align: center;
