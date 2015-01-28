@@ -10,13 +10,6 @@ $(function() {
         .addClass( "ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" )
         .find( ".drakard" )
         .addClass( "ui-widget-header ui-corner-all" );
-
-    $( ".portlet-toggle" ).click(function() {
-        var icon = $( this );
-        icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
-    });
-
-
     var countingfirstcolumn = $(".userid_jean_simard .notstarted .panel-body .drakard").length;
     $( ".userid_jean_simard .notstarted .panel-title" ).text( countingfirstcolumn + " Files" );
 
@@ -31,6 +24,12 @@ $(function() {
 
     var countingffthcolumn = $(".userid_jean_simard .completed .panel-body .drakard").length;
     $( ".userid_jean_simard .completed .panel-title" ).text( countingffthcolumn + " Files" );
+
+    $( ".portlet-toggle" ).click(function() {
+        var icon = $( this );
+        icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
+    });
+
 });
 
 
