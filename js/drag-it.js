@@ -1,5 +1,11 @@
 $( document ).ready(function() {
+
+    setTimeout(function() {
+        $("#myModal").modal();
+    }, 7000);
+
     $(".navbar-filters").pin();
+
     $('input[name="daterange"]').daterangepicker(
         {
             format: 'YYYY-MM-DD',
@@ -10,9 +16,8 @@ $( document ).ready(function() {
             alert('A date range was chosen: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
         }
     );
-});
 
-$(function() {
+    $(function() {
     $( ".column" ).sortable({
         revert: true,
         connectWith: ".column",
@@ -72,7 +77,7 @@ $(function() {
         }
     );
 
+    });
 });
-
 
 
