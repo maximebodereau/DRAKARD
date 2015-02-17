@@ -1,9 +1,5 @@
 $( document ).ready(function() {
 
-    setTimeout(function() {
-        $("#myModal").modal();
-    }, 7000);
-
     $(".navbar-filters").pin();
 
     $('input[name="daterange"]').daterangepicker(

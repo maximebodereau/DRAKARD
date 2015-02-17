@@ -240,3 +240,12 @@ body.landing {
         transform: translate3d(0, -40%, 0);
     }
 }
+
+.list-unstyled li {
+    padding-bottom: 5px;
+    padding-left: 20px;
+}
+
+.chart {
+    padding-bottom: 45px;
+}
