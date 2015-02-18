@@ -54,6 +54,9 @@ $( document ).ready(function() {
         icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
     });
 
+    $(".collapse-unassigned").click(function(){
+        $(".well").toggleClass("hide show");
+        });
 
     var countingfirstcolumn = $(".userid_jean_simard .notstarted .panel-body .drakard").length;
     $( ".userid_jean_simard .notstarted .panel-title .numberoffiles" ).text( countingfirstcolumn + " Files" );
@@ -75,5 +78,6 @@ $( document ).ready(function() {
 
     });
 });
+
 
 
