@@ -39,8 +39,8 @@ $( document ).ready(function() {
                 if ( countingfrthcolumn <= 4) {$('.column.reviewpartner .panel.panel-success').removeClass( "panel-danger" );};
             var countingffthcolumn = $(".userid_jean_simard .completed .panel-body .drakard").length;
             $( ".userid_jean_simard .completed .panel-title" ).text( countingffthcolumn + " Files" );
-                if ( countingffthcolumn >= 4) {$('.column.completed .panel.panel-default').addClass( "panel-danger" );};
-                if ( countingffthcolumn <= 4) {$('.column.completed .panel.panel-default').removeClass( "panel-danger" );};
+                if ( countingffthcolumn >= 4) {$('.column.completed .panel.panel-default').addClass( "panel-success" );};
+                if ( countingffthcolumn <= 4) {$('.column.completed .panel.panel-default').removeClass( "panel-success" );};
         }
     });
 
