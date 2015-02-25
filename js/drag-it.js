@@ -58,6 +58,12 @@ $( document ).ready(function() {
         $(".well").toggleClass("hide show");
         });
 
+    $(".collapse-cards-all").click(function(){
+        $(".collapse-cards-all").toggleClass("glyphicon-eye-open glyphicon-eye-close");
+        $(".column .panel-body").toggleClass("hide show");
+
+    });
+
     var countingfirstcolumn = $(".userid_jean_simard .notstarted .panel-body .drakard").length;
     $( ".userid_jean_simard .notstarted .panel-title .numberoffiles" ).text( countingfirstcolumn + " Files" );
     var countingscdcolumn = $(".userid_jean_simard .started .panel-body .drakard").length;
