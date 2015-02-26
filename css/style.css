@@ -52,7 +52,7 @@
 }
 
 .navbar-filters {
-    z-index: 1;
+    z-index: 10;
     background: #e6e6e6;
     box-shadow: 0px 1px 3px rgba(0,0,0,0.32);
     border: 1px solid rgba(255, 255, 255, 0.43);
@@ -248,4 +248,39 @@ body.landing {
 
 .chart {
     padding-bottom: 45px;
+}
+
+.progress {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.progress-bar {
+    color: #393939;
+    font-weight: bold;
+
+}
+
+.progress-zero {
+    width: 0%;
+}
+
+.progress-vingt {
+    width: 20%;
+}
+
+.progress-quarante {
+    width: 40%;
+}
+
+.progress-soixante {
+    width: 60%;
+}
+
+.progress-octante {
+    width: 80%;
+}
+
+.progress-cent {
+    width: 100%;
 }
