@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8">
+  <title>DRAKARD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+	<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+	<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+	<!--script src="js/less-1.3.3.min.js"></script-->
+	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+	
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/daterangepicker-bs3.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="img/favicon.png">
+  
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="js/jquery.pin.js"></script>
+    <script type="text/javascript" src="js/moment.js"></script>
+    <script type="text/javascript" src="js/daterangepicker.js"></script>
+    <script type="text/javascript" src="js/drag-it.js"></script>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="col-md-12 column">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            <a class="navbar-brand" href="#"><img src="img/logo-menu.png" height="20px" alt=""/></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="webapp.html"><span class="glyphicon glyphicon-tasks"></span> Status</a>
+                </li>
+                <li>
+                    <a href="webapp-report.html"><span class="glyphicon glyphicon-dashboard"></span> Report</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">MacGillivray LLP <strong class="caret"></strong></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="webapp-admin.html">Admin</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">Preferences</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#"><span class="glyphicon glyphicon-log-out"></span> Log out</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+</nav>
+
+
+<div class="container">
+
+    <div class="row clearfix">
+
+        <div class="col-md-12">
+        <nav class="navbar navbar-default navbar-filters" role="navigation">
+            <div class="col-md-12 column">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#"><small><span class="glyphicon glyphicon-filter"></span></small></a>
+                </div>
+
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Employees <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#"><img class="img-circle" src="img/garcon1.jpg" > Jean Simard</a></li>
+                                <li><a href="#"><img class="img-circle" src="img/garcon2.jpg" > Thomas tremblay</a></li>
+                                <li><a href="#"><img class="img-circle" src="img/fille1.jpg" > Cadenne Johnson</a></li>
+                                <li><a href="#"><img class="img-circle" src="img/fille2.jpg" > Annie Côté</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Status <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Not Started</a></li>
+                                <li><a href="#">Started</a></li>
+                                <li><a href="#">Ready for Review</a></li>
+                                <li><a href="#">Ready for Partners</a></li>
+                                <li><a href="#">Completed</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Starring <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#"><span class="glyphicon glyphicon-star"></span> </a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span> </a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span> </a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="form-group rangedate">
+                                <input type="text" id="reservationtime" class="form-control" placeholder="Dates">
+                            </div>
+
+                            <script type="text/javascript">
+                                $(document).ready(function() {
+                                    $('#reservationtime').daterangepicker({ timePicker: false, timePickerIncrement: 30, format: 'MM/DD/YYYY' });
+                                });
+                            </script>
+                        </li>
+                    </ul>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+
+            </div>
+
+        </nav>
+        </div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12 center-block">
+            <h5 class="collapse-unassigned text-muted">8 Not Started Cards
+            <div class="pull-right"><span class="glyphicon glyphicon-chevron-down"></span>
+            </div>
+            </h5>
+            <hr/>
+
+            <div class="well hide">
+                <tr class="userid_jean_simard">
+                <div class="col-md-3 column">
+                    <div class="panel-body">
+                        <div class="panel panel-default">
+                            <div class="drakard">
+                                <label class="label label-default">#321</label>
+                                <span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
+                                <div class="pull-right"><small><span class="glyphicon glyphicon-calendar"></span> 10d</small></div>
+                                <div class="Name"> Piper Roy</div>
+                                <label class="label label-default">Rolled Forward</label>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                <div class="col-md-3 column">
+                <div class="panel-body">
+                    <div class="panel panel-default">
+                        <div class="drakard">
+                            <label class="label label-default">#5321</label>
+                            <span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
+                            <div class="pull-right"><small><span class="glyphicon glyphicon-calendar"></span> 10d</small></div>
+                            <div class="Name"> Juliette Brown </div>
+                            <label class="label label-default">Rolled Forward</label>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-md-3 column">
+                    <div class="panel-body">
+                        <div class="panel panel-default">
+                            <div class="drakard">
+                                <label class="label label-default">#5321</label>
+                                <span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
+                                <div class="pull-right"><small><span class="glyphicon glyphicon-calendar"></span> 10d</small></div>
+                                <div class="Name"> Hayden Boucher</div>
+                                <label class="label label-default">Rolled Forward</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 column">
+                    <div class="panel-body">
+                        <div class="panel panel-default">
+                            <div class="drakard">
+                                <label class="label label-default">#5321</label>
+                                <span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
+                                <div class="pull-right"><small><span class="glyphicon glyphicon-calendar"></span> 10d</small></div>
+                                <div class="Name"> Eli Thompson</div>
+                                <label class="label label-default">Rolled Forward</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </tr>
+                <tr class="userid_jean_simard">
+                <div class="col-md-3 column">
+                    <div class="panel-body">
+                        <div class="panel panel-default">
+                            <div class="drakard">
+                                <label class="label label-default">#5321</label>
+                                <span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
+                                <div class="pull-right"><small><span class="glyphicon glyphicon-calendar"></span> 10d</small></div>
+                                <div class="Name"> Ethan Patel </div>
+                                <label class="label label-default">Rolled Forward</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 column">
+                    <div class="panel-body">
+                        <div class="panel panel-default">
+                            <div class="drakard">
+                                <label class="label label-default">#5321</label>
+                                <span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
+                                <div class="pull-right"><small><span class="glyphicon glyphicon-calendar"></span> 10d</small></div>
+                                <div class="Name"> Cohen Taylor</div>
+                                <label class="label label-default">Rolled Forward</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 column">
+                    <div class="panel-body">
+                        <div class="panel panel-default">
+                            <div class="drakard">
+                                <label class="label label-default">#5321</label>
+                                <span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
+                                <div class="pull-right"><small><span class="glyphicon glyphicon-calendar"></span> 10d</small></div>
+                                <div class="Name"> Henry Bouchard</div>
+                                <label class="label label-default">Rolled Forward</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 column">
+                    <div class="panel-body">
+                        <div class="panel panel-default">
+                            <div class="drakard">
+                                <label class="label label-default">#5321</label>
+                                <span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
+                                <div class="pull-right"><small><span class="glyphicon glyphicon-calendar"></span> 10d</small></div>
+                                <div class="Name"> Evelyn Roy</div>
+                                <label class="label label-default">Rolled Forward</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </tr>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+<!-- Tableau Principal -->
+    <div class="row clearfix">
+		<div class="col-md-12">
+        <div class="pull-right">
+        <span class="glyphicon glyphicon-eye-open collapse-cards-all text-primary"></span>&nbsp;
+        <div class="btn-group" role="group" aria-label="...">
+            <a href="#"><button type="button" class="btn btn-default active"><span class="glyphicon glyphicon glyphicon-th"></span></button></a>
+            <a href="webapp.html"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-th-list"></span></button></a>
+        </div>
+        </div>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th> In queue</th>
+                    <th> Started</th>
+                    <th> Ready for Review </th>
+                    <th> Ready for Partners </th>
+                    <th>Completed <div class="pull-right"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="userid_jean_simard">
+
+
+                    <td class="column notstarted">
+                        <div class="panel panel-default column">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><span class="numberoffiles">All Files</span></h3>
+                                <!--<div class="pull-right">10</div>-->
+                            </div>
+                            <div class="panel-body hide">
+                                <div class="panel panel-default">
+                                    <div class="drakard">
+                                        <label class="label label-default">#5321</label>
+                                        <span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
+                                        <div class="pull-right"><small><span class="glyphicon glyphicon-calendar"></span> 10d</small></div>
+                                        <div class="Name"> Dominique Thompson <span class="pull-right"><img class="img-circle" src="img/h1.jpg"></a></span></div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-zero" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            </div>
+                                            <label class="pull-right text-muted"><small>Rolled Forward &nbsp;</small></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body hide">
+                                <div class="panel panel-default">
+                                    <div class="drakard">
+                                        <label class="label label-default">#3621</label>
+<span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
+<div class="pull-right"><small><span class="glyphicon glyphicon-calendar"></span> 7d</small></div>
+                                        <div class="Name"> Paisley Pelletier <span class="pull-right"><img class="img-circle" src="img/garcon1.jpg"></a></span></div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-zero" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            </div>
+                                            <label class="pull-right text-muted"><small>Not Prepared &nbsp;</small></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body hide">
+                                <div class="panel panel-default">
+                                    <div class="drakard">
+                                        <label class="label label-default">#2534</label>
+<span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
+<div class="pull-right"><small><span class="glyphicon glyphicon-calendar"></span> 5d</small></div>
+                                        <div class="Name"> Casey Brown <span class="pull-right"><img class="img-circle" src="img/garcon1.jpg"></a></span></div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-zero" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            </div>
+                                            <label class="pull-right text-muted"><small>Document receive &nbsp;</small></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="column started">
+                        <div class="panel panel-success column">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">4 Files</h3>
+                            </div>
+                            <div class="panel-body hide">
+                                <div class="panel panel-default">
+                                    <div class="drakard">
+                                        <label class="label label-default">#5321</label>
+                                        <span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
+                                        <div class="pull-right text-danger"><small><span class="glyphicon glyphicon-calendar"></span> 10h</small></div>
+                                        <div class="Name"> Haley Tremblay <span class="pull-right"><img class="img-circle" src="img/fille1.jpg"></a></span></div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-quarante progress-bar-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                                Scanned</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body hide">
+                                <div class="panel panel-default">
+                                    <div class="drakard">
+                                        <label class="label label-default">#5321</label>
+<span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
+                                        <div class="Name"> Antonio Fortin <span class="pull-right"><img class="img-circle" src="img/garcon2.jpg"></a></span></div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-vingt progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            </div>
+                                            <label class="pull-right text-muted"><small>In progress &nbsp;</small></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body hide">
+                                <div class="panel panel-default">
+                                    <div class="drakard">
+                                        <label class="label label-default">#5321</label>
+<span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
+                                        <div class="Name"> Taylor Gagnon <span class="pull-right"><img class="img-circle" src="img/garcon2.jpg"></a></span></div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-vingt progress-bar-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            </div>
+                                            <label class="pull-right text-muted"><small>Pending &nbsp;</small></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="column review">
+                        <div class="panel panel-warning column">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">4 Files</h3>
+                            </div>
+                            <div class="panel-body hide">
+                                <div class="panel panel-default">
+                                    <div class="drakard">
+                                        <label class="label label-default">#1634</label>
+<span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
+                                        <div class="Name"> Peter Simard <span class="pull-right"><img class="img-circle" src="img/garcon2.jpg"></a></span></div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-octante progress-bar-danger" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                                To review
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body hide">
+                                <div class="panel panel-default">
+                                    <div class="drakard">
+                                        <label class="label label-default">#9273</label>
+<span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
+                                        <div class="Name"> Beckett Lam <span class="pull-right"><img class="img-circle" src="img/fille1.jpg"></a></span></div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-quarante progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            </div>
+                                            <label class="pull-right text-muted"><small>To Review &nbsp;</small></label>
+
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body hide">
+                                <div class="panel panel-default">
+                                    <div class="drakard">
+                                        <label class="label label-default">#5321</label>
+<span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
+                                        <div class="Name"> Sarah Bélanger <span class="pull-right"><img class="img-circle" src="img/fille2.jpg"></a></span></div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-soixante progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                                In review
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="column reviewpartner">
+                        <div class="panel panel-success column">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">4 Files</h3>
+                            </div>
+                            <div class="panel-body hide">
+                                <div class="panel panel-default">
+                                    <div class="drakard">
+                                        <label class="label label-default">#9765</label>
+<span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
+                                        <div class="Name"> Claire Morin <span class="pull-right"><img class="img-circle" src="img/h3.jpg"></a></span></div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-octante progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                                Reviewed
+                                            </div>
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body hide">
+                                <div class="panel panel-default">
+                                    <div class="drakard">
+                                        <label class="label label-default">#5321</label>
+<span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
+                                        <div class="Name"> Lily Patel <span class="pull-right"><img class="img-circle" src="img/fille2.jpg"></a></span></div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-octante progress-bar-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                                To review
+                                            </div>
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </td>
+                    <td class="column completed">
+                        <div class="panel panel-default column">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">4 Files</h3>
+                            </div>
+                            <div class="panel-body hide">
+                                <div class="panel panel-default">
+                                    <div class="drakard">
+                                        <label class="label label-default">#9862</label>
+<span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
+                                        <div class="Name"> Cameron Lam <span class="pull-right"><img class="img-circle" src="img/h3.jpg"></a></span></div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-octante progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                                Printed
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body hide">
+                                <div class="panel panel-default">
+                                    <div class="drakard">
+                                        <label class="label label-default">#9862</label>
+<span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
+                                        <div class="Name"> Esteban Lam <span class="pull-right"><img class="img-circle" src="img/fille2.jpg.jpg"></a></span></div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-cent progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                                Sent to client
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body hide">
+                                <div class="panel panel-default">
+                                    <div class="drakard">
+                                        <label class="label label-default">#9862</label>
+<span class="difficulty"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></span>
+                                        <div class="Name"> Cameron Lam <span class="pull-right"><img class="img-circle" src="img/h2.jpg"></a></span></div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-cent progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                                Billed
+                                            </div>
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </td>
+
+                </tr>
+                 </tbody>
+            </table>
+
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+		</div>
+	</div>
+
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel">Have you enjoyed the demo ?</h4>
+                </div>
+                <div class="modal-body">
+
+                    <h1 class="lead center-block text-center">We need <strong>emails</strong> to know if you or your Firm are interested.</h1>
+                    <form action="http://free.us2.list-manage.com/subscribe/post?u=b0d46575bbc28b1dac0337882&amp;id=9ca2b9c8c5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup">
+                            <div id="mc_embed_signup_scroll" class="form-group">
+                                <div class="mc-field-group input-group-lg">
+                                    <label for="mce-EMAIL" class="">Email </label>
+                                    <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL">
+                                </div>
+
+                                <br/>
+                                <div id="mce-responses" class="clear input-group-lg">
+                                    <div class="response text-danger lead" id="mce-error-response" style="display:none"></div>
+                                    <div class="response text-success lead" id="mce-success-response" style="display:none"></div>
+                                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <div style="position: absolute; left: -5000px;"><input type="text" name="b_b0d46575bbc28b1dac0337882_9ca2b9c8c5" tabindex="-1" value=""></div>
+                                <div class="clear">
+                                    <br/>
+                                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn-block btn-lg btn-success"></div>
+                            </div>
+                    </div>
+                    </form>
+                    <script type='text/javascript' src='http://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+                    <!--End mc_embed_signup-->
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-59099467-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</body>
+</html>

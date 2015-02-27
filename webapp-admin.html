@@ -86,17 +86,376 @@
 <!-- Tableau Principal -->
 <div class="container">
     <div class="row clearfix">
-		<div class="col-md-12">
-            <div class="col-md-3">
-                <div class="status">
-                    Document receive
+            <div class="col-md-12 table-responsive">
+                    <table class="table table-bordered table-hover table-sortable" id="tab_logic">
+                        <thead>
+                        <tr >
+                            <th class="text-center col-md-3">
+                                Tasks
+                            </th>
+                            <th class="text-center col-md-4">
+                                Collaborators
+                            </th>
+                            <th class="text-center col-md-3">
+                                Hourly Rate
+                            </th>
+                            <th class="text-center col-md-2">
+                                Save
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td data-name="tasks">
+                                <div class="text-center">Document receive</div>
+                            </td>
+                            <td data-name="collaborators">
+                                <div class="input-group search">
+                                    <input type="text" class="form-control dropdown-toggle" data-toggle="dropdown" aria-expanded="false" placeholder="Search for...">
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#"><img class="img-circle" src="img/garcon1.jpg" > Jean Simard</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/garcon2.jpg" > Thomas tremblay</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/fille1.jpg" > Cadenne Johnson</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/fille2.jpg" > Annie Côté</a></li>
+                                    </ul>
+                                    <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span> </button>
+                                        </span>
+                                </div>
+                            </td>
+                            <td data-name="rate">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                    <span class="input-group-addon">$</span>
+                                </div>                            </td>
+                            <td data-name="del" class="text-center">
+                                <button name="del" class="btn btn-success row-remove "><span class="glyphicon glyphicon-ok"></span></button>
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tbody>
+                        <tr>
+                            <td data-name="tasks">
+                                <div class="text-center">Scanned</div>
+                            </td>
+                            <td data-name="collaborators">
+                                <div class="input-group search">
+                                    <input type="text" class="form-control dropdown-toggle" data-toggle="dropdown" aria-expanded="false" placeholder="Search for...">
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#"><img class="img-circle" src="img/garcon1.jpg" > Jean Simard</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/garcon2.jpg" > Thomas tremblay</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/fille1.jpg" > Cadenne Johnson</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/fille2.jpg" > Annie Côté</a></li>
+                                    </ul>
+                                    <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span> </button>
+                                        </span>
+                                </div>
+                            </td>
+                            <td data-name="rate">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                    <span class="input-group-addon">$</span>
+                                </div>                            </td>
+                            <td data-name="del" class="text-center">
+                                <button name="del" class="btn btn-success row-remove "><span class="glyphicon glyphicon-ok"></span></button>
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tbody>
+                        <tr>
+                            <td data-name="tasks">
+                                <div class="text-center">In Progress</div>
+                            </td>
+                            <td data-name="collaborators">
+                                <div class="input-group search">
+                                    <input type="text" class="form-control dropdown-toggle" data-toggle="dropdown" aria-expanded="false" placeholder="Search for...">
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#"><img class="img-circle" src="img/garcon1.jpg" > Jean Simard</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/garcon2.jpg" > Thomas tremblay</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/fille1.jpg" > Cadenne Johnson</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/fille2.jpg" > Annie Côté</a></li>
+                                    </ul>
+                                    <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span> </button>
+                                        </span>
+                                </div>
+                            </td>
+                            <td data-name="rate">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                    <span class="input-group-addon">$</span>
+                                </div>                            </td>
+                            <td data-name="del" class="text-center">
+                                <button name="del" class="btn btn-success row-remove "><span class="glyphicon glyphicon-ok"></span></button>
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tbody>
+                        <tr>
+                            <td data-name="tasks">
+                                <div class="text-center">To review</div>
+                            </td>
+                            <td data-name="collaborators">
+                                <div class="input-group search">
+                                    <input type="text" class="form-control dropdown-toggle" data-toggle="dropdown" aria-expanded="false" placeholder="Search for...">
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#"><img class="img-circle" src="img/garcon1.jpg" > Jean Simard</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/garcon2.jpg" > Thomas tremblay</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/fille1.jpg" > Cadenne Johnson</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/fille2.jpg" > Annie Côté</a></li>
+                                    </ul>
+                                    <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span> </button>
+                                        </span>
+                                </div>
+                            </td>
+                            <td data-name="rate">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                    <span class="input-group-addon">$</span>
+                                </div>                            </td>
+                            <td data-name="del" class="text-center">
+                                <button name="del" class="btn btn-success row-remove "><span class="glyphicon glyphicon-ok"></span></button>
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tbody>
+                        <tr>
+                            <td data-name="tasks">
+                                <div class="text-center">In Review</div>
+                            </td>
+                            <td data-name="collaborators">
+                                <div class="input-group search">
+                                    <input type="text" class="form-control dropdown-toggle" data-toggle="dropdown" aria-expanded="false" placeholder="Search for...">
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#"><img class="img-circle" src="img/garcon1.jpg" > Jean Simard</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/garcon2.jpg" > Thomas tremblay</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/fille1.jpg" > Cadenne Johnson</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/fille2.jpg" > Annie Côté</a></li>
+                                    </ul>
+                                    <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span> </button>
+                                        </span>
+                                </div>
+                            </td>
+                            <td data-name="rate">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                    <span class="input-group-addon">$</span>
+                                </div>                            </td>
+                            <td data-name="del" class="text-center">
+                                <button name="del" class="btn btn-success row-remove "><span class="glyphicon glyphicon-ok"></span></button>
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tbody>
+                        <tr>
+                            <td data-name="tasks">
+                                <div class="text-center">Ready To Print</div>
+                            </td>
+                            <td data-name="collaborators">
+                                <div class="input-group search">
+                                    <input type="text" class="form-control dropdown-toggle" data-toggle="dropdown" aria-expanded="false" placeholder="Search for...">
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#"><img class="img-circle" src="img/garcon1.jpg" > Jean Simard</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/garcon2.jpg" > Thomas tremblay</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/fille1.jpg" > Cadenne Johnson</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/fille2.jpg" > Annie Côté</a></li>
+                                    </ul>
+                                    <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span> </button>
+                                        </span>
+                                </div>
+                            </td>
+                            <td data-name="rate">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                    <span class="input-group-addon">$</span>
+                                </div>                            </td>
+                            <td data-name="del" class="text-center">
+                                <button name="del" class="btn btn-success row-remove "><span class="glyphicon glyphicon-ok"></span></button>
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tbody>
+                        <tr>
+                            <td data-name="tasks">
+                                <div class="text-center">Collated</div>
+                            </td>
+                            <td data-name="collaborators">
+                                <div class="input-group search">
+                                    <input type="text" class="form-control dropdown-toggle" data-toggle="dropdown" aria-expanded="false" placeholder="Search for...">
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#"><img class="img-circle" src="img/garcon1.jpg" > Jean Simard</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/garcon2.jpg" > Thomas tremblay</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/fille1.jpg" > Cadenne Johnson</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/fille2.jpg" > Annie Côté</a></li>
+                                    </ul>
+                                    <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span> </button>
+                                        </span>
+                                </div>
+                            </td>
+                            <td data-name="rate">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                    <span class="input-group-addon">$</span>
+                                </div>                            </td>
+                            <td data-name="del" class="text-center">
+                                <button name="del" class="btn btn-success row-remove "><span class="glyphicon glyphicon-ok"></span></button>
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tbody>
+                        <tr>
+                            <td data-name="tasks">
+                                <div class="text-center">Sent to client</div>
+                            </td>
+                            <td data-name="collaborators">
+                                <div class="input-group search">
+                                    <input type="text" class="form-control dropdown-toggle" data-toggle="dropdown" aria-expanded="false" placeholder="Search for...">
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#"><img class="img-circle" src="img/garcon1.jpg" > Jean Simard</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/garcon2.jpg" > Thomas tremblay</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/fille1.jpg" > Cadenne Johnson</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/fille2.jpg" > Annie Côté</a></li>
+                                    </ul>
+                                    <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span> </button>
+                                        </span>
+                                </div>
+                            </td>
+                            <td data-name="rate">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                    <span class="input-group-addon">$</span>
+                                </div>                            </td>
+                            <td data-name="del" class="text-center">
+                                <button name="del" class="btn btn-success row-remove "><span class="glyphicon glyphicon-ok"></span></button>
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tbody>
+                        <tr>
+                            <td data-name="tasks">
+                                <div class="text-center">authorized by Client</div>
+                            </td>
+                            <td data-name="collaborators">
+                                <div class="input-group search">
+                                    <input type="text" class="form-control dropdown-toggle" data-toggle="dropdown" aria-expanded="false" placeholder="Search for...">
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#"><img class="img-circle" src="img/garcon1.jpg" > Jean Simard</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/garcon2.jpg" > Thomas tremblay</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/fille1.jpg" > Cadenne Johnson</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/fille2.jpg" > Annie Côté</a></li>
+                                    </ul>
+                                    <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span> </button>
+                                        </span>
+                                </div>
+                            </td>
+                            <td data-name="rate">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                    <span class="input-group-addon">$</span>
+                                </div>                            </td>
+                            <td data-name="del" class="text-center">
+                                <button name="del" class="btn btn-success row-remove "><span class="glyphicon glyphicon-ok"></span></button>
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tbody>
+                        <tr>
+                            <td data-name="tasks">
+                                <div class="text-center">Completed</div>
+                            </td>
+                            <td data-name="collaborators">
+                                <div class="input-group search">
+                                    <input type="text" class="form-control dropdown-toggle" data-toggle="dropdown" aria-expanded="false" placeholder="Search for...">
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#"><img class="img-circle" src="img/garcon1.jpg" > Jean Simard</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/garcon2.jpg" > Thomas tremblay</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/fille1.jpg" > Cadenne Johnson</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/fille2.jpg" > Annie Côté</a></li>
+                                    </ul>
+                                    <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span> </button>
+                                        </span>
+                                </div>
+                            </td>
+                            <td data-name="rate">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                    <span class="input-group-addon">$</span>
+                                </div>                            </td>
+                            <td data-name="del" class="text-center">
+                                <button name="del" class="btn btn-success row-remove "><span class="glyphicon glyphicon-ok"></span></button>
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tbody>
+                        <tr>
+                            <td data-name="tasks">
+                                <div class="text-center">Billed</div>
+                            </td>
+                            <td data-name="collaborators">
+                                <div class="input-group search">
+                                    <input type="text" class="form-control dropdown-toggle" data-toggle="dropdown" aria-expanded="false" placeholder="Search for...">
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#"><img class="img-circle" src="img/garcon1.jpg" > Jean Simard</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/garcon2.jpg" > Thomas tremblay</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/fille1.jpg" > Cadenne Johnson</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/fille2.jpg" > Annie Côté</a></li>
+                                    </ul>
+                                    <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span> </button>
+                                        </span>
+                                </div>
+                            </td>
+                            <td data-name="rate">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                    <span class="input-group-addon">$</span>
+                                </div>                            </td>
+                            <td data-name="del" class="text-center">
+                                <button name="del" class="btn btn-success row-remove "><span class="glyphicon glyphicon-ok"></span></button>
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tbody>
+                        <tr>
+                            <td data-name="tasks">
+                                <div class="text-center">Amended</div>
+                            </td>
+                            <td data-name="collaborators">
+                                <div class="input-group search">
+                                    <input type="text" class="form-control dropdown-toggle" data-toggle="dropdown" aria-expanded="false" placeholder="Search for...">
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#"><img class="img-circle" src="img/garcon1.jpg" > Jean Simard</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/garcon2.jpg" > Thomas tremblay</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/fille1.jpg" > Cadenne Johnson</a></li>
+                                        <li><a href="#"><img class="img-circle" src="img/fille2.jpg" > Annie Côté</a></li>
+                                    </ul>
+                                    <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span> </button>
+                                        </span>
+                                </div>
+                            </td>
+                            <td data-name="rate">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                    <span class="input-group-addon">$</span>
+                                </div>                            </td>
+                            <td data-name="del" class="text-center">
+                                <button name="del" class="btn btn-success row-remove "><span class="glyphicon glyphicon-ok"></span></button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-            <div class="col-md-9">
-
-            </div>
-		</div>
-	</div>
+     </div>
 </div>
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

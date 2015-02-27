@@ -6,6 +6,10 @@
     padding-bottom: 30px;
 }
 
+.input-group.search{
+    padding-bottom: 0px;
+}
+
 .panel-group {
     display: inline-block;
 }
@@ -283,4 +287,13 @@ body.landing {
 
 .progress-cent {
     width: 100%;
+}
+
+.table-sortable tbody tr {
+    cursor: move;
+}
+
+.Name {
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
